@@ -84,7 +84,7 @@ apt install unzip
 
 
 echo "Pulling docker image"
-su - ubuntu -c "source /home/ubuntu/.bashrc && docker pullfra.ocir.io/ocisateam/tritonllm_llama3.2:latest"
+su - ubuntu -c "source /home/ubuntu/.bashrc && docker pull fra.ocir.io/ocisateam/tritonllm_llama3.2:latest"
 
 echo "Starting the docker container"
 su - ubuntu -c "nohup docker run --rm \
