@@ -84,7 +84,7 @@ apt install unzip
 
 
 echo "Pulling docker image"
-su - ubuntu -c "source /home/ubuntu/.bashrc && docker pull mtz.ocir.io/orasenatdpltintegration03/tritonllm-llama32:latest"
+su - ubuntu -c "source /home/ubuntu/.bashrc && docker pullfra.ocir.io/ocisateam/tritonllm_llama3.2:latest"
 
 echo "Starting the docker container"
 su - ubuntu -c "nohup docker run --rm \
@@ -97,7 +97,7 @@ su - ubuntu -c "nohup docker run --rm \
   --device /dev/fuse \
   --security-opt apparmor=unconfined \
   -e engine=$model_engine \
-  mtz.ocir.io/orasenatdpltintegration03/tritonllm-llama32:latest > ~ubuntu/docker_container.log 2>&1 &"
+  fra.ocir.io/ocisateam/tritonllm_llama3.2:latest > ~ubuntu/docker_container.log 2>&1 &"
 
 
 su - ubuntu -c "sudo nvidia-smi"
